@@ -25,7 +25,7 @@ class _ChatboxScreenState extends State<ChatboxScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Inbox'),
+        title: Text('💬 Inbox'),
       ),
 
       body: Column(

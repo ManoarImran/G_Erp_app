@@ -6,7 +6,7 @@ class AboutUsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
   return Scaffold(
-  appBar: AppBar(title: const Text('About Us'),),
+  appBar: AppBar(title: const Text('🧾 About Us'),),
     body: AboutUsPageBody(),
   );
   }
@@ -38,8 +38,9 @@ class AboutUsPageBody extends StatelessWidget {
               height: 50,
               // color: Colors.amber,
               child: Row(
-                children: [ Image.network('https://seeklogo.com/images/A/akij-group-logo-A3CB0BF8D8-seeklogo.com.png'),
-                  const SizedBox(height: 50,width: 50),
+                children: [ Center(child: Image.asset('assets/A.jpg')),
+                  // Image.network('https://seeklogo.com/images/A/akij-group-logo-A3CB0BF8D8-seeklogo.com.png'),
+                  const SizedBox(height: 40,width: 40),
                   const SizedBox(
                     width: 50,
                   ),
@@ -62,8 +63,9 @@ class AboutUsPageBody extends StatelessWidget {
               height: 50,
               // color: Colors.amber,
               child: Row(
-                children: [ Image.network('https://seeklogo.com/images/A/akij-group-logo-A3CB0BF8D8-seeklogo.com.png'),
-                  const SizedBox(height: 50,width: 50),
+                children: [ Center(child: Image.asset('assets/G.jpg')),
+                  // Image.network('https://seeklogo.com/images/A/akij-group-logo-A3CB0BF8D8-seeklogo.com.png'),
+                  const SizedBox(height: 40,width: 40),
                   const SizedBox(
                     width: 50,
                   ),
@@ -86,8 +88,9 @@ class AboutUsPageBody extends StatelessWidget {
               height: 50,
               // color: Colors.amber,
               child: Row(
-                children: [ Image.network('https://seeklogo.com/images/A/akij-group-logo-A3CB0BF8D8-seeklogo.com.png'),
-                  const SizedBox(height: 50,width: 50),
+                children: [  Center(child: Image.asset('assets/A.jpg')),
+                  // Image.network('https://seeklogo.com/images/A/akij-group-logo-A3CB0BF8D8-seeklogo.com.png'),
+                  const SizedBox(height: 40,width: 40),
                   const SizedBox(
                     width: 50,
                   ),
@@ -110,8 +113,9 @@ class AboutUsPageBody extends StatelessWidget {
               height: 50,
               // color: Colors.amber,
               child: Row(
-                children: [ Image.network('https://seeklogo.com/images/A/akij-group-logo-A3CB0BF8D8-seeklogo.com.png'),
-                  const SizedBox(height: 50,width: 50),
+                children: [ Center(child: Image.asset('assets/G.jpg')),
+                  // Image.network('https://seeklogo.com/images/A/akij-group-logo-A3CB0BF8D8-seeklogo.com.png'),
+                  const SizedBox(height: 40,width: 40),
                   const SizedBox(
                     width: 50,
                   ),
@@ -134,8 +138,9 @@ class AboutUsPageBody extends StatelessWidget {
               height: 50,
               // color: Colors.amber,
               child: Row(
-                children: [ Image.network('https://seeklogo.com/images/A/akij-group-logo-A3CB0BF8D8-seeklogo.com.png'),
-                  const SizedBox(height: 50,width: 50),
+                children: [ Center(child: Image.asset('assets/A.jpg')),
+                  // Image.network('https://seeklogo.com/images/A/akij-group-logo-A3CB0BF8D8-seeklogo.com.png'),
+                  const SizedBox(height: 40,width: 40),
                   const SizedBox(
                     width: 50,
                   ),
@@ -158,21 +163,25 @@ class AboutUsPageBody extends StatelessWidget {
               height: 50,
               // color: Colors.amber,
               child: Row(
-                children: [ Image.network('https://seeklogo.com/images/A/akij-group-logo-A3CB0BF8D8-seeklogo.com.png'),
-                  const SizedBox(height: 50,width: 50),
+                children: [
+                  Center(child: Image.asset('assets/G.jpg')),
+                  // Image.network('https://seeklogo.com/images/A/akij-group-logo-A3CB0BF8D8-seeklogo.com.png'),
+                  const SizedBox(height: 40,width: 40),
                   const SizedBox(
                     width: 50,
                   ),
-                  Container(
-                      alignment: Alignment.center,
-                      // padding: const EdgeInsets.all(10),
-                      child: const Text(
-                        'Akij Plastics',
-                        style: TextStyle(
-                            color: Colors.blue,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 20),
-                      )),
+                  Center(
+                    child: Container(
+
+                        // padding: const EdgeInsets.all(10),
+                        child: const Text(
+                          'Akij Plastics',
+                          style: TextStyle(
+                              color: Colors.blue,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 20),
+                        )),
+                  ),
                 ],
               ),
             ),

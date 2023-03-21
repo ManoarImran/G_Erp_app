@@ -6,7 +6,7 @@ class LeaveApplicationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Leave Application'),),
+      appBar: AppBar(title: const Text('📝Leave Application'),),
 
     );
   }

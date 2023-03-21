@@ -6,7 +6,7 @@ class MovementApplicationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Movement Application'),),
+      appBar: AppBar(title: const Text('📬 Movement Application'),),
 
     );
   }

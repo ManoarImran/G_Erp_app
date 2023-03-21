@@ -8,7 +8,7 @@ class EmployeeProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Profile'),),
+      appBar: AppBar(title: const Text('🌐 Profile'),),
     );
   }
 }
