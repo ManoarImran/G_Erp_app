@@ -48,7 +48,7 @@ class AboutUsPageBody extends StatelessWidget {
                       alignment: Alignment.center,
                       // padding: const EdgeInsets.all(10),
                       child: const Text(
-                        'Akij Plastics',
+                        'Plastics',
                         style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.w500,
@@ -73,7 +73,7 @@ class AboutUsPageBody extends StatelessWidget {
                       alignment: Alignment.center,
                       // padding: const EdgeInsets.all(10),
                       child: const Text(
-                        'Akij Plastics',
+                        'Plastics',
                         style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.w500,
@@ -98,7 +98,7 @@ class AboutUsPageBody extends StatelessWidget {
                       alignment: Alignment.center,
                       // padding: const EdgeInsets.all(10),
                       child: const Text(
-                        'Akij Plastics',
+                        'Plastics',
                         style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.w500,
@@ -123,7 +123,7 @@ class AboutUsPageBody extends StatelessWidget {
                       alignment: Alignment.center,
                       // padding: const EdgeInsets.all(10),
                       child: const Text(
-                        'Akij Plastics',
+                        'Plastics',
                         style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.w500,
@@ -148,7 +148,7 @@ class AboutUsPageBody extends StatelessWidget {
                       alignment: Alignment.center,
                       // padding: const EdgeInsets.all(10),
                       child: const Text(
-                        'Akij Plastics',
+                        'Plastics',
                         style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.w500,
@@ -175,7 +175,7 @@ class AboutUsPageBody extends StatelessWidget {
 
                         // padding: const EdgeInsets.all(10),
                         child: const Text(
-                          'Akij Plastics',
+                          'Plastics',
                           style: TextStyle(
                               color: Colors.blue,
                               fontWeight: FontWeight.w500,
@@ -190,7 +190,7 @@ class AboutUsPageBody extends StatelessWidget {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
                 child: const Text(
-                  'Developed By- Akij Assets It Team',
+                  'Developed By- Assets It Team',
                   style: TextStyle(
                       color: Colors.blue,
                       fontWeight: FontWeight.w500,

@@ -7,7 +7,9 @@ class Page2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("🖥️ Page2"),),
+      // body: Page2Body(),
 
     );
   }
 }
+
