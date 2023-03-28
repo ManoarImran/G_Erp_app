@@ -1,16 +1,46 @@
-# garments_erp
+import 'package:flutter/material.dart';
 
-A new Flutter project.
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
 
-## Getting Started
+class _MyHomePageState extends State<MyHomePage> {
+  DateTime _selectedDate = DateTime.now();
 
-This project is a starting point for a Flutter application.
+  Future<void> _selectDate(BuildContext context) async {
+    final DateTime picked = await showDatePicker(
+        context: context,
+        initialDate: _selectedDate,
+        firstDate: DateTime(2015, 8),
+        lastDate: DateTime(2101));
+    if (picked != null && picked != _selectedDate)
+      setState(() {
+        _selectedDate = picked;
+      });
+  }
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Date Picker Example'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'Selected date: ${_selectedDate.toString()}',
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () => _selectDate(context),
+              child: Text('Select date'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

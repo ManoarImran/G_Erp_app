@@ -6,7 +6,7 @@ class SalaryStatementPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('💲alary Statement'),),
+      appBar: AppBar(title: const Text('Salary Statement'),),
 
     );
   }

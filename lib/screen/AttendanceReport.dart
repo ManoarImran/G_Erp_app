@@ -6,7 +6,7 @@ class AttendanceReportPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('🗓️ Attendance Report'),),
+      appBar: AppBar(title: const Text('Attendance Report'),),
       body: LoginPageBody(),
     );
   }

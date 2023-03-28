@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'AboutUs.dart';
 import 'AttendanceReport.dart';
-import 'Page2.dart';
 import 'ChatBox.dart';
 import 'EmployeeProfile.dart';
 import 'LeaveApplication.dart';
@@ -49,17 +48,6 @@ class _LoginPageBodyState extends State<LoginPageBody> {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => EmployeeProfilePage()));
-                  },
-                )),
-            SizedBox(height: 10),
-            Container(
-                height: 50,
-                padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                child: ElevatedButton(
-                  child: const Text('Page2'),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Page2()));
                   },
                 )),
             SizedBox(height: 10),

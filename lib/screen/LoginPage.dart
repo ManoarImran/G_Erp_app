@@ -20,7 +20,9 @@ class _LoginPageState extends State<LoginPage> {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
+
       body: const LoginPageBody(),
+
     );
   }
 }
@@ -42,7 +44,9 @@ class _LoginPageBodyState extends State<LoginPageBody> {
     return Padding(
         padding: const EdgeInsets.all(10),
         child: ListView(
-          children: <Widget>[
+          children:
+
+          <Widget>[
             SizedBox(height: 60),
             Container(
                 alignment: Alignment.center,
