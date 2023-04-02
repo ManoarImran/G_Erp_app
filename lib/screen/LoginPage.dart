@@ -102,7 +102,6 @@ class _LoginPageBodyState extends State<LoginPageBody> {
                     // print(emailController.text);
                     // print(passwordController.text);
                     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) =>HomePage()));
-
                   },
                 )),
           ],

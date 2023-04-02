@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'HomePage.dart';
 
 class EmployeeProfilePage extends StatelessWidget {
@@ -69,25 +68,6 @@ class EmployeeProfileBody extends StatelessWidget {
                 ],
               ),
             ),
-
-            // SizedBox(height: 10),
-            // Container(
-            //   child:
-            //   Container(
-            //     height: 200,
-            //     color: Colors.blue,
-            //     child: const Center(
-            //       // child: Text(
-            //       //   'Employee Photo',
-            //       //   style: TextStyle(
-            //       //     color: Colors.white,
-            //       //     fontSize: 24,
-            //       //   ),
-            //       // ),
-            //     ),
-            //   ),
-            // ),
-
           ],
         ));
   }

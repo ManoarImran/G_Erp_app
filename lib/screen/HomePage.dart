@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:garments_erp/screen/page1.dart';
 import 'AboutUs.dart';
 import 'AttendanceReport.dart';
 import 'ChatBox.dart';
@@ -114,6 +115,17 @@ class _LoginPageBodyState extends State<LoginPageBody> {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => AboutUsPage()));
+                  },
+                )),
+            SizedBox(height: 10),
+            Container(
+                height: 50,
+                padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                child: ElevatedButton(
+                  child: const Text('P1'),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Page1Body()));
                   },
                 )),
 
