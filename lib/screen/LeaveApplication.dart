@@ -1,359 +1,251 @@
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 
-class LeaveApplicationPage extends StatefulWidget {
-  const LeaveApplicationPage({Key? key}) : super(key: key);
+import 'LeavePopup.dart';
+
+class LeaveApplication extends StatefulWidget {
+  const LeaveApplication({Key? key}) : super(key: key);
 
   @override
-  State<LeaveApplicationPage> createState() => _LeaveApplicationPageState();
+  State<LeaveApplication> createState() => _LeaveApplicationState();
 }
 
-class _LeaveApplicationPageState extends State<LeaveApplicationPage> {
-  late DateTime _selectedDate;
+class _LeaveApplicationState extends State<LeaveApplication> {
+  late List<GDPData> _chartData;
+  late TooltipBehavior _tooltipBehavior;
 
+  @override
+  void initState() {
+    _chartData = getChartData();
+    _tooltipBehavior = TooltipBehavior(enable: true);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Leave Application')),
-      body: Column(
-        children: [
-          Card(
-            child: Container(
-              height: 60,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        'Name:',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        '............',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        'Enroll:',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        '............',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Card(
-            child: Container(
-              height: 220,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Balance',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        'Earn Leave',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        '............',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        'Casual Leave',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        '............',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        'Maternal Leave',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        '............',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        'Medical Leave',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        '............',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        'Bereavement Leave',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        '............',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        'LWP',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        '............',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        'PL',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        '............',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        'Short',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        '............',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Card(
-            child: Container(
-              height: 200,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ElevatedButton(
-                        onPressed:()=> _selectDate,
-                        child: Text("FromDate"),
-                      ),
-                      ElevatedButton(
-                        onPressed:()=> _selectDate,
-                        child: Text("To Date"),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        // or Container
-                        child: TextField(
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            labelText: 'Enter Reason',
-                            hintText: 'Enter Your Reason',
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Expanded(
-                        // or Container
-                        child: TextField(
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            labelText: 'Address',
-                            hintText: 'Enter Your Address',
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      DropdownButton(
-                        value: "A",
-                        items: [
-                          //add items in the dropdown
-                          DropdownMenuItem(child: Text("A"), value: "A"),
-
-                          DropdownMenuItem(
-                            child: Text("B"),
-                            value: "B",
-                          ),
-
-                          DropdownMenuItem(
-                            child: Text("C"),
-                            value: "C",
-                          )
-                        ],
-                        onChanged: (value) {
-                          //get value when changed
-                          print("You selected $value");
-                        },
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      ElevatedButton(
-                        child: const Text('Submit'),
-                        onPressed: () {
-                          // print(emailController.text);
-                          // print(passwordController.text);
-                          // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) =>HomePage()));
-                        },
-                      )
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ],
+    var arrNames = [
+      'AAAA',
+      'BBBB',
+      'BBBB',
+      'BBBB',
+      'CCC',
+      'CCC',
+      'CCC',
+      'DDD',
+      'DDD',
+      'DDD',
+    ];
+    return SafeArea(
+        child: Scaffold(
+      appBar: AppBar(
+        title: const Text('Leave Application'),
       ),
-    );
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(height: 10),
+
+            Card(
+              child: Container(
+                height: 250,
+                child: GridView(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    crossAxisSpacing: 2,
+                    mainAxisSpacing: 2,
+                  ),
+                  children: [
+                    SfCircularChart(
+                      // title: ChartTitle(text: 'Medical'),
+                      // legend:
+                      // Legend(isVisible: true, overflowMode: LegendItemOverflowMode.wrap),
+                      tooltipBehavior: _tooltipBehavior,
+                      series: <CircularSeries>[
+                        // PieSeries<GDPData,String>
+                        // RadialBarSeries<GDPData,String>
+                        DoughnutSeries<GDPData, String>(
+                            dataSource: _chartData,
+                            xValueMapper: (GDPData data, _) => data.continent,
+                            yValueMapper: (GDPData data, _) => data.gdp,
+                            dataLabelSettings:
+                                DataLabelSettings(isVisible: true),
+                            enableTooltip: true),
+                      ],
+                    ),
+                    SfCircularChart(
+                      // title: ChartTitle(text: 'Medical'),
+                      // legend:
+                      // Legend(isVisible: true, overflowMode: LegendItemOverflowMode.wrap),
+                      tooltipBehavior: _tooltipBehavior,
+                      series: <CircularSeries>[
+                        // PieSeries<GDPData,String>
+                        // RadialBarSeries<GDPData,String>
+                        DoughnutSeries<GDPData, String>(
+                            dataSource: _chartData,
+                            xValueMapper: (GDPData data, _) => data.continent,
+                            yValueMapper: (GDPData data, _) => data.gdp,
+                            dataLabelSettings:
+                                DataLabelSettings(isVisible: true),
+                            enableTooltip: true),
+                      ],
+                    ),
+                    SfCircularChart(
+                      // title: ChartTitle(text: 'Medical'),
+                      // legend:
+                      // Legend(isVisible: true, overflowMode: LegendItemOverflowMode.wrap),
+                      tooltipBehavior: _tooltipBehavior,
+                      series: <CircularSeries>[
+                        // PieSeries<GDPData,String>
+                        // RadialBarSeries<GDPData,String>
+                        DoughnutSeries<GDPData, String>(
+                            dataSource: _chartData,
+                            xValueMapper: (GDPData data, _) => data.continent,
+                            yValueMapper: (GDPData data, _) => data.gdp,
+                            dataLabelSettings:
+                                DataLabelSettings(isVisible: true),
+                            enableTooltip: true),
+                      ],
+                    ),
+                    SfCircularChart(
+                      // title: ChartTitle(text: 'Medical'),
+                      // legend:
+                      // Legend(isVisible: true, overflowMode: LegendItemOverflowMode.wrap),
+                      tooltipBehavior: _tooltipBehavior,
+                      series: <CircularSeries>[
+                        // PieSeries<GDPData,String>
+                        // RadialBarSeries<GDPData,String>
+                        DoughnutSeries<GDPData, String>(
+                            dataSource: _chartData,
+                            xValueMapper: (GDPData data, _) => data.continent,
+                            yValueMapper: (GDPData data, _) => data.gdp,
+                            dataLabelSettings:
+                                DataLabelSettings(isVisible: true),
+                            enableTooltip: true),
+                      ],
+                    ),
+                    SfCircularChart(
+                      // title: ChartTitle(text: 'Medical'),
+                      // legend:
+                      // Legend(isVisible: true, overflowMode: LegendItemOverflowMode.wrap),
+                      tooltipBehavior: _tooltipBehavior,
+                      series: <CircularSeries>[
+                        // PieSeries<GDPData,String>
+                        // RadialBarSeries<GDPData,String>
+                        DoughnutSeries<GDPData, String>(
+                            dataSource: _chartData,
+                            xValueMapper: (GDPData data, _) => data.continent,
+                            yValueMapper: (GDPData data, _) => data.gdp,
+                            dataLabelSettings:
+                                DataLabelSettings(isVisible: true),
+                            enableTooltip: true),
+                      ],
+                    ),
+                    SfCircularChart(
+                      // title: ChartTitle(text: 'Medical'),
+                      // legend:
+                      // Legend(isVisible: true, overflowMode: LegendItemOverflowMode.wrap),
+                      tooltipBehavior: _tooltipBehavior,
+                      series: <CircularSeries>[
+                        // PieSeries<GDPData,String>
+                        // RadialBarSeries<GDPData,String>
+                        DoughnutSeries<GDPData, String>(
+                            dataSource: _chartData,
+                            xValueMapper: (GDPData data, _) => data.continent,
+                            yValueMapper: (GDPData data, _) => data.gdp,
+                            dataLabelSettings:
+                                DataLabelSettings(isVisible: true),
+                            enableTooltip: true),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Card(
+              child: Container(
+                height: 40,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Center(
+                          child: Text(
+                            'Name, Enroll , Designation',
+                            style: TextStyle(
+                              fontSize: 16,
+                              // fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              child: Text(
+              'Application',
+              style: TextStyle(
+                  color: Colors.black,
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+
+            ),
+            Card(
+                child: Container(
+                    height: 260,
+                    child: ListView.separated(
+                        itemBuilder: (context, index) {
+                          return Text(
+                            arrNames[index],
+                            style: TextStyle(
+                                fontSize: 12, ),
+                          );
+                        },
+                        itemCount: arrNames.length,
+                      scrollDirection: Axis.vertical,
+                      separatorBuilder: (context, index) { return Divider(height:20 ,thickness: 1,); },
+
+                    ))),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        hoverColor: Colors.deepPurpleAccent,
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => LeavePopUp()));
+        },
+        child: Icon(Icons.add),
+      ),
+    ));
   }
 
-  Future<void> _selectDate(BuildContext context) async {
-    final DateTime? picked = await showDatePicker(
-        context: context,
-        initialDate: DateTime.now(),
-        firstDate: DateTime(2022, 8),
-        lastDate: DateTime(2050));
-    if (picked != null && picked != _selectedDate)
-      setState(() {
-        _selectedDate = picked;
-      });
+
+  List<GDPData> getChartData() {
+    final List<GDPData> chartData = [
+      GDPData('Earn Leave', 1),
+      GDPData('Casual Leave', 2),
+      GDPData('Material Leave', 3),
+      GDPData('Medical Leave', 4),
+      GDPData('Bereavement Leave', 5),
+      GDPData('LWP', 6),
+      GDPData('PL', 7),
+    ];
+    return chartData;
   }
+
+}
+
+class GDPData {
+  GDPData(this.continent, this.gdp);
+
+  final String continent;
+  final int gdp;
 }

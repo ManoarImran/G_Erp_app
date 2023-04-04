@@ -3,12 +3,12 @@ import 'package:intl/intl.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
-class AttendanceReportPage extends StatefulWidget {
+class Page5 extends StatefulWidget {
   @override
-  _AttendanceReportPageState createState() => _AttendanceReportPageState();
+  _Page5State createState() => _Page5State();
 }
 
-class _AttendanceReportPageState extends State<AttendanceReportPage> {
+class _Page5State extends State<Page5> {
   String _employeeName = '';
   bool _isPresent = false;
 

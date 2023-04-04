@@ -4,6 +4,8 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 class Page1Body extends StatefulWidget {
   const Page1Body({Key? key}) : super(key: key);
 
+
+
   @override
   State<Page1Body> createState() => _Page1BodyState();
 }
@@ -34,7 +36,8 @@ class _Page1BodyState extends State<Page1Body> {
         series: <CircularSeries>[
           // PieSeries<GDPData,String>
           // RadialBarSeries<GDPData,String>
-          DoughnutSeries<GDPData, String>(
+          DoughnutSeries<GDPData, String>
+            (
               dataSource: _chartData,
               xValueMapper: (GDPData data, _) => data.continent,
               yValueMapper: (GDPData data, _) => data.gdp,
@@ -42,6 +45,7 @@ class _Page1BodyState extends State<Page1Body> {
               enableTooltip: true),
         ],
       ),
+
     ));
   }
 

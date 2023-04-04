@@ -35,34 +35,34 @@ class EmployeeProfileBody extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    'Md. Manoar Imran',
+                    'Md. ..............',
                     style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(height: 10),
                   Text(
                     'Software Engineer',
                     style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
                   SizedBox(height: 10),
                   Text(
-                    'mono******@.com',
+                    'abc******@.com',
                     style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
                   SizedBox(height: 10),
                   Text(
-                    'Tejgaon Gulshan Link Road',
+                    'AAA BBB CCC, Road',
                     style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
                 ],
