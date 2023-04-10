@@ -17,23 +17,14 @@ class AboutUsPage extends StatelessWidget {
 class AboutUsPageBody extends StatelessWidget {
   const AboutUsPageBody({Key? key}) : super(key: key);
 
+
+
   @override
   Widget build(BuildContext context) {
     return Padding(
         padding: const EdgeInsets.all(10),
         child: ListView(
           children: <Widget>[
-            // SizedBox(height: 10),
-            // Container(
-            //     alignment: Alignment.center,
-            //     padding: const EdgeInsets.all(10),
-            //     child: const Text(
-            //       'About Us',
-            //       style: TextStyle(
-            //           color: Colors.blueAccent,
-            //           fontWeight: FontWeight.w500,
-            //           fontSize: 20),
-            //     )),
             SizedBox(height: 10),
             Container(
               alignment: Alignment.center,
@@ -41,7 +32,7 @@ class AboutUsPageBody extends StatelessWidget {
               // color: Colors.amber,
               child: Row(
                 children: [
-                  Expanded(child: Center(child: Image.asset('assets/G.jpg'))),
+                  Expanded(child: Center(child: Image.asset('assets/Logo.jpg'))),
                   // Image.network('https://seeklogo.com/images/A/akij-group-logo-A3CB0BF8D8-seeklogo.com.png'),
                   const SizedBox(height: 40, width: 40),
                   const SizedBox(
@@ -52,7 +43,7 @@ class AboutUsPageBody extends StatelessWidget {
                         alignment: Alignment.center,
                         // padding: const EdgeInsets.all(10),
                         child: const Text(
-                          'something that someone says or writes officially, or an action done to express an opinion',
+                          'Context',
                           style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.w500,
@@ -69,7 +60,7 @@ class AboutUsPageBody extends StatelessWidget {
               // color: Colors.amber,
               child: Row(
                 children: [
-                  Expanded(child: Center(child: Image.asset('assets/G.jpg'))),
+                  Expanded(child: Center(child: Image.asset('assets/Logo.jpg'))),
                   // Image.network('https://seeklogo.com/images/A/akij-group-logo-A3CB0BF8D8-seeklogo.com.png'),
                   const SizedBox(height: 40, width: 40),
                   const SizedBox(
@@ -80,7 +71,7 @@ class AboutUsPageBody extends StatelessWidget {
                         alignment: Alignment.center,
                         // padding: const EdgeInsets.all(10),
                         child: const Text(
-                          'something that someone says or writes officially, or an action done to express an opinion',
+                          'Context',
                           style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.w500,
@@ -97,7 +88,7 @@ class AboutUsPageBody extends StatelessWidget {
               // color: Colors.amber,
               child: Row(
                 children: [
-                  Expanded(child: Center(child: Image.asset('assets/G.jpg'))),
+                  Expanded(child: Center(child: Image.asset('assets/Logo.jpg'))),
                   // Image.network('https://seeklogo.com/images/A/akij-group-logo-A3CB0BF8D8-seeklogo.com.png'),
                   const SizedBox(height: 40, width: 40),
                   const SizedBox(
@@ -108,7 +99,7 @@ class AboutUsPageBody extends StatelessWidget {
                         alignment: Alignment.center,
                         // padding: const EdgeInsets.all(10),
                         child: const Text(
-                          'something that someone says or writes officially, or an action done to express an opinion',
+                          'Context',
                           style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.w500,
@@ -125,7 +116,7 @@ class AboutUsPageBody extends StatelessWidget {
               // color: Colors.amber,
               child: Row(
                 children: [
-                  Expanded(child: Center(child: Image.asset('assets/G.jpg'))),
+                  Expanded(child: Center(child: Image.asset('assets/Logo.jpg'))),
                   // Image.network('https://seeklogo.com/images/A/akij-group-logo-A3CB0BF8D8-seeklogo.com.png'),
                   const SizedBox(height: 40, width: 40),
                   const SizedBox(
@@ -136,7 +127,7 @@ class AboutUsPageBody extends StatelessWidget {
                         alignment: Alignment.center,
                         // padding: const EdgeInsets.all(10),
                         child: const Text(
-                          'something that someone says or writes officially, or an action done to express an opinion',
+                          'Context',
                           style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.w500,
@@ -153,7 +144,7 @@ class AboutUsPageBody extends StatelessWidget {
               // color: Colors.amber,
               child: Row(
                 children: [
-                  Expanded(child: Center(child: Image.asset('assets/G.jpg'))),
+                  Expanded(child: Center(child: Image.asset('assets/Logo.jpg'))),
                   // Image.network('https://seeklogo.com/images/A/akij-group-logo-A3CB0BF8D8-seeklogo.com.png'),
                   const SizedBox(height: 40, width: 40),
                   const SizedBox(
@@ -164,7 +155,7 @@ class AboutUsPageBody extends StatelessWidget {
                         alignment: Alignment.center,
                         // padding: const EdgeInsets.all(10),
                         child: const Text(
-                          'something that someone says or writes officially, or an action done to express an opinion',
+                          'Context',
                           style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.w500,
@@ -181,7 +172,7 @@ class AboutUsPageBody extends StatelessWidget {
               // color: Colors.amber,
               child: Row(
                 children: [
-                  Expanded(child: Center(child: Image.asset('assets/G.jpg'))),
+                  Expanded(child: Center(child: Image.asset('assets/Logo.jpg'))),
                   // Image.network('https://seeklogo.com/images/A/akij-group-logo-A3CB0BF8D8-seeklogo.com.png'),
                   const SizedBox(height: 40, width: 40),
                   const SizedBox(
@@ -192,7 +183,7 @@ class AboutUsPageBody extends StatelessWidget {
                         alignment: Alignment.center,
                         // padding: const EdgeInsets.all(10),
                         child: const Text(
-                          'something that someone says or writes officially, or an action done to express an opinion',
+                          'Context',
                           style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.w500,
@@ -207,7 +198,7 @@ class AboutUsPageBody extends StatelessWidget {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
                 child: const Text(
-                  'Developed By-It Team',
+                  'Developed By - It Team',
                   style: TextStyle(
                       color: Colors.blue,
                       fontWeight: FontWeight.w500,

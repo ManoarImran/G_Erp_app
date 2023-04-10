@@ -8,7 +8,6 @@ import 'AboutUs.dart';
 import 'AttendanceReport.dart';
 import 'ChatBox.dart';
 import 'EmployeeProfile.dart';
-import 'LeaveApplication2.dart';
 import 'MovementApplication.dart';
 import 'SalaryStatement.dart';
 
@@ -225,10 +224,10 @@ class _LoginPageBodyState extends State<LoginPageBody> {
                       height: 50,
                       padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                       child: ElevatedButton(
-                        child: const Text('Leave Application 2'),
+                        child: const Text('P5'),
                         onPressed: () {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => LeaveApplication2()));
+                              MaterialPageRoute(builder: (context) => Page5()));
                         },
                       )),
                 ),
@@ -238,18 +237,7 @@ class _LoginPageBodyState extends State<LoginPageBody> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Expanded(
-                  child: Container(
-                      height: 50,
-                      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                      child: ElevatedButton(
-                        child: const Text('P5'),
-                        onPressed: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => Page5()));
-                        },
-                      )),
-                ),
+
                 SizedBox(height: 10),
                 Expanded(
                   child: Container(

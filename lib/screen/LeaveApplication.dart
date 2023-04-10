@@ -24,16 +24,17 @@ class _LeaveApplicationState extends State<LeaveApplication> {
   @override
   Widget build(BuildContext context) {
     var arrNames = [
-      'AAAA',
-      'BBBB',
-      'BBBB',
-      'BBBB',
-      'CCC',
-      'CCC',
-      'CCC',
-      'DDD',
-      'DDD',
-      'DDD',
+      'Application 01',
+      'Application 02',
+      'Application 03',
+      'Application 04',
+      'Application 05',
+      'Application 06',
+      'Application 07',
+      'Application 08',
+      'Application 09',
+      'Application 10',
+      'Application 11',
     ];
     return SafeArea(
         child: Scaffold(
@@ -45,7 +46,6 @@ class _LeaveApplicationState extends State<LeaveApplication> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(height: 10),
-
             Card(
               child: Container(
                 height: 250,
@@ -188,30 +188,34 @@ class _LeaveApplicationState extends State<LeaveApplication> {
             ),
             Container(
               child: Text(
-              'Application',
-              style: TextStyle(
+                'Application',
+                style: TextStyle(
                   color: Colors.black,
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
-            ),
-
             ),
             Card(
                 child: Container(
                     height: 260,
                     child: ListView.separated(
-                        itemBuilder: (context, index) {
-                          return Text(
-                            arrNames[index],
-                            style: TextStyle(
-                                fontSize: 12, ),
-                          );
-                        },
-                        itemCount: arrNames.length,
+                      itemBuilder: (context, index) {
+                        return Text(
+                          arrNames[index],
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
+                        );
+                      },
+                      itemCount: arrNames.length,
                       scrollDirection: Axis.vertical,
-                      separatorBuilder: (context, index) { return Divider(height:20 ,thickness: 1,); },
-
+                      separatorBuilder: (context, index) {
+                        return Divider(
+                          height: 20,
+                          thickness: 1,
+                        );
+                      },
                     ))),
           ],
         ),
@@ -219,14 +223,13 @@ class _LeaveApplicationState extends State<LeaveApplication> {
       floatingActionButton: FloatingActionButton(
         hoverColor: Colors.deepPurpleAccent,
         onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => LeavePopUp()));
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => LeavePopUp()));
         },
         child: Icon(Icons.add),
       ),
     ));
   }
-
 
   List<GDPData> getChartData() {
     final List<GDPData> chartData = [
@@ -240,7 +243,6 @@ class _LeaveApplicationState extends State<LeaveApplication> {
     ];
     return chartData;
   }
-
 }
 
 class GDPData {
