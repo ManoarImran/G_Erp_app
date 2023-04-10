@@ -48,8 +48,10 @@ class _LeaveApplicationState extends State<LeaveApplication> {
             SizedBox(height: 10),
             Card(
               child: Container(
+
                 height: 250,
                 child: GridView(
+
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 3,
                     crossAxisSpacing: 2,
@@ -63,8 +65,9 @@ class _LeaveApplicationState extends State<LeaveApplication> {
                       tooltipBehavior: _tooltipBehavior,
                       series: <CircularSeries>[
                         // PieSeries<GDPData,String>
-                        // RadialBarSeries<GDPData,String>
-                        DoughnutSeries<GDPData, String>(
+                        RadialBarSeries<GDPData,String>
+                        // DoughnutSeries<GDPData, String>
+                          (
                             dataSource: _chartData,
                             xValueMapper: (GDPData data, _) => data.continent,
                             yValueMapper: (GDPData data, _) => data.gdp,
@@ -201,11 +204,21 @@ class _LeaveApplicationState extends State<LeaveApplication> {
                     height: 260,
                     child: ListView.separated(
                       itemBuilder: (context, index) {
-                        return Text(
-                          arrNames[index],
-                          style: TextStyle(
-                            fontSize: 12,
+                        return ListTile(
+                          title: Text(
+                            arrNames[index],
+                            style: TextStyle(
+                              fontSize: 12,
+                            ),
                           ),
+                          subtitle: Text(
+                            "2023-03-01 to 2023-03-05",
+                            style: TextStyle(
+                              fontSize: 10,
+                            ),
+                          ),
+                          trailing: Text("Approved", style: TextStyle(fontSize: 10),),
+                          dense: true,
                         );
                       },
                       itemCount: arrNames.length,
@@ -233,13 +246,9 @@ class _LeaveApplicationState extends State<LeaveApplication> {
 
   List<GDPData> getChartData() {
     final List<GDPData> chartData = [
-      GDPData('Earn Leave', 1),
-      GDPData('Casual Leave', 2),
-      GDPData('Material Leave', 3),
-      GDPData('Medical Leave', 4),
-      GDPData('Bereavement Leave', 5),
-      GDPData('LWP', 6),
-      GDPData('PL', 7),
+      GDPData('Balance', 1),
+      GDPData('Taken', 2),
+      GDPData('Remaining', 3),
     ];
     return chartData;
   }

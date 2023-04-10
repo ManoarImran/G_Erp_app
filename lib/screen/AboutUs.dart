@@ -6,7 +6,11 @@ class AboutUsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: Colors.red,
       appBar: AppBar(
+        // elevation: 0,
+        // backgroundColor: Colors.red,
+        // backgroundColor: Colors.transparent,
         title: const Text('About Us'),
       ),
       body: AboutUsPageBody(),
@@ -24,7 +28,8 @@ class AboutUsPageBody extends StatelessWidget {
     return Padding(
         padding: const EdgeInsets.all(10),
         child: ListView(
-          children: <Widget>[
+          children:
+          <Widget>[
             SizedBox(height: 10),
             Container(
               alignment: Alignment.center,
