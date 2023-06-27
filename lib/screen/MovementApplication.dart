@@ -8,9 +8,12 @@ class MovementApplicationPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Movement Application'),
+
       ),
     );
   }
 }
+
+
 
 

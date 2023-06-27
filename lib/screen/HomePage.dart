@@ -4,12 +4,15 @@ import 'package:garments_erp/screen/page2.dart';
 import 'package:garments_erp/screen/page3.dart';
 import 'package:garments_erp/screen/LeaveApplication.dart';
 import 'package:garments_erp/screen/page5.dart';
+import 'package:garments_erp/screen/page6.dart';
 import 'AboutUs.dart';
 import 'AttendanceReport.dart';
 import 'ChatBox.dart';
 import 'EmployeeProfile.dart';
+import 'MapPage.dart';
 import 'MovementApplication.dart';
 import 'SalaryStatement.dart';
+import 'UiDesign.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -18,7 +21,8 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text('Home Page')),
+        backgroundColor: Colors.black,
+        title: const Center(child: Text('Home Page')),
       ),
       body: const LoginPageBody(),
     );
@@ -38,227 +42,325 @@ class _LoginPageBodyState extends State<LoginPageBody> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-        padding: const EdgeInsets.all(10),
-        child: ListView(
-          children: <Widget>[
-            SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: Container(
-                      height: 50,
-                      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                      child: ElevatedButton(
-                        child: const Text('Employee Profile'),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => EmployeeProfilePage()));
-                        },
-                      )),
-                ),
-                SizedBox(height: 10),
-                Expanded(
-                  child: Container(
-                      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                      height: 50,
-                      child: ElevatedButton(
-                        child: const Text('Attendance Report'),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      AttendanceReportPage()));
-                        },
-                      )),
-                ),
-              ],
-            ),
-            SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: Container(
-                      height: 50,
-                      width: 180,
-                      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                      child: ElevatedButton(
-                        child: const Text('Salary Statement'),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => SalaryStatementPage()));
-                        },
-                      )),
-                ),
-                SizedBox(height: 10),
-                Expanded(
-                  child: Container(
-                      height: 50,
-                      width: 180,
-                      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                      child: ElevatedButton(
-                        child: const Text(
-                          'Leave Application',
-                          textAlign: TextAlign.center,
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      LeaveApplication()));
-                        },
-                      )),
-                ),
-              ],
-            ),
-            SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: Container(
-                      height: 50,
-                      width: 180,
-                      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                      child: ElevatedButton(
-                        child: const Text(
-                          'Movement Application',
-                          textAlign: TextAlign.center,
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      MovementApplicationPage()));
-                        },
-                      )),
-                ),
-                SizedBox(height: 10),
-                Expanded(
-                  child: Container(
-                      height: 50,
-                      width: 180,
-                      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                      child: ElevatedButton(
-                        child: const Text(
-                          'ChatBox',
-                          textAlign: TextAlign.center,
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => ChatBoxPage()));
-                        },
-                      )),
-                ),
-              ],
-            ),
-            SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: Container(
-                      height: 50,
-                      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                      child: ElevatedButton(
-                        child: const Text('P1'),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Page1Body()));
-                        },
-                      )),
-                ),
-                SizedBox(height: 10),
-                Expanded(
-                  child: Container(
-                      height: 50,
-                      width: 180,
-                      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                      child: ElevatedButton(
-                        child: const Text(
-                          'P2',
-                          textAlign: TextAlign.center,
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Page2page()));
-                        },
-                      )),
-                ),
-              ],
-            ),
-            SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: Container(
-                      height: 50,
-                      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                      child: ElevatedButton(
-                        child: const Text('P3'),
-                        onPressed: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => Page3()));
-                        },
-                      )),
-                ),
-                SizedBox(height: 10),
-                Expanded(
-                  child: Container(
-                      height: 50,
-                      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                      child: ElevatedButton(
-                        child: const Text('P5'),
-                        onPressed: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => Page5()));
-                        },
-                      )),
-                ),
-              ],
-            ),
-            SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-
-                SizedBox(height: 10),
-                Expanded(
-                  child: Container(
-                      height: 50,
-                      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                      child: ElevatedButton(
-                        child: const Text(
-                          'About Us',
-                          textAlign: TextAlign.center,
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => AboutUsPage()));
-                        },
-                      )),
-                ),
-              ],
-            ),
-          ],
-        ));
+    return Container(
+      decoration: const BoxDecoration(
+          image: DecorationImage(
+        fit: BoxFit.cover,
+        image: NetworkImage(
+          'https://wallpaperaccess.com/full/3034393.jpg',
+        ),
+      )),
+      child: ListView(
+        children: <Widget>[
+          const SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Container(
+                    height: 50,
+                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const EmployeeProfilePage()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white30, // Background color
+                      ),
+                      child: const Text('Employee Profile'),
+                    )),
+              ),
+              const SizedBox(height: 10),
+              Expanded(
+                child: Container(
+                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    height: 50,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => AttendanceReportPage()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white30, // Background color
+                      ),
+                      child: const Text('Attendance Report'),
+                    )),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Container(
+                    height: 50,
+                    width: 180,
+                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const SalaryStatementPage()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white30, // Background color
+                      ),
+                      child: const Text('Salary Statement'),
+                    )),
+              ),
+              const SizedBox(height: 10),
+              Expanded(
+                child: Container(
+                    height: 50,
+                    width: 180,
+                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const LeaveApplication()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white30, // Background color
+                      ),
+                      child: const Text(
+                        'Leave Application',
+                        textAlign: TextAlign.center,
+                      ),
+                    )),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Container(
+                    height: 50,
+                    width: 180,
+                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const MovementApplicationPage()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white30, // Background color
+                      ),
+                      child: const Text(
+                        'Movement Application',
+                        textAlign: TextAlign.center,
+                      ),
+                    )),
+              ),
+              const SizedBox(height: 10),
+              Expanded(
+                child: Container(
+                    height: 50,
+                    width: 180,
+                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const ChatBoxPage()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white30, // Background color
+                      ),
+                      child: const Text(
+                        'ChatBox',
+                        textAlign: TextAlign.center,
+                      ),
+                    )),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Container(
+                    height: 50,
+                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Page1Body()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white30, // Background color
+                      ),
+                      child: const Text('P1'),
+                    )),
+              ),
+              const SizedBox(height: 10),
+              Expanded(
+                child: Container(
+                    height: 50,
+                    width: 180,
+                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Page2page()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white30, // Background color
+                      ),
+                      child: const Text(
+                        'P2',
+                        textAlign: TextAlign.center,
+                      ),
+                    )),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Container(
+                    height: 50,
+                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => const Page3()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white30, // Background color
+                      ),
+                      child: const Text('P3'),
+                    )),
+              ),
+              const SizedBox(height: 10),
+              Expanded(
+                child: Container(
+                    height: 50,
+                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Page5()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white30, // Background color
+                      ),
+                      child: const Text('P5'),
+                    )),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Container(
+                    height: 50,
+                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const UiDesign()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white30, // Background color
+                      ),
+                      child: const Text(
+                        'UiD',
+                        textAlign: TextAlign.center,
+                      ),
+                    )),
+              ),
+              const SizedBox(height: 10),
+              Expanded(
+                child: Container(
+                    height: 50,
+                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const AboutUsPage()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white30, // Background color
+                      ),
+                      child: const Text(
+                        'About Us',
+                        textAlign: TextAlign.center,
+                      ),
+                    )),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Row(
+            children: [
+              Expanded(
+                child: Container(
+                    height: 50,
+                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => const Page6()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white30, // Background color
+                      ),
+                      child: const Text(
+                        'P6',
+                        textAlign: TextAlign.center,
+                      ),
+                    )),
+              ),
+              Expanded(
+                child: Container(
+                    height: 50,
+                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => MyGMap()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white30, // Background color
+                      ),
+                      child: const Text(
+                        'GMap',
+                        textAlign: TextAlign.center,
+                      ),
+                    )),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }

@@ -233,13 +233,15 @@ class _LeaveApplicationState extends State<LeaveApplication> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: FloatingActionButton.extended(
         hoverColor: Colors.deepPurpleAccent,
         onPressed: () {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => LeavePopUp()));
         },
-        child: Icon(Icons.add),
+        icon : Icon(Icons.add),
+        label: Text('Add New'),
+
       ),
     ));
   }

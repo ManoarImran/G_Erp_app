@@ -6,7 +6,11 @@ class LeavePopUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: Colors.lightGreen,
       appBar: AppBar(
+      //   elevation: 0,
+        // backgroundColor: Colors.red,
+        // backgroundColor: Colors.transparent,
         title: const Text('New Leave Application'),
       ),
       body: NewLeaveBody(),
@@ -136,6 +140,12 @@ class _NewLeaveBodyState extends State<NewLeaveBody> {
                     // print(passwordController.text);
                     // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) =>HomePage()));
                   },
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 40.0, vertical: 20.0),
+                    primary: Colors.deepPurpleAccent,
+                    shape: StadiumBorder(),
+                  ),
                 )),
           ],
         ));
