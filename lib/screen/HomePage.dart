@@ -50,7 +50,7 @@ class _LoginPageBodyState extends State<LoginPageBody> {
           'https://wallpaperaccess.com/full/3034393.jpg',
         ),
       )),
-      child: ListView(
+      child: Column(
         children: <Widget>[
           const SizedBox(height: 10),
           Row(
